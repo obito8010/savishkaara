@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FC 25</title>
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="/assets/icons/saavishkaara_logo_new.png">
+
+    <!-- External Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.3/dist/cdn.min.js"
+      defer
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Fixed Header -->
+    <header>
+      <a href="javascript:history.back()" class="absolute top-4 left-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="white"
+        >
+          <path
+            d="M19 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H19v-2z"
+          />
+        </svg>
+      </a>
+    </header>
+
+    <!-- Card Container -->
+    <div class="container">
+      <!-- Left Section (Poster with Slideshow) -->
+      <div
+        class="left-section"
+        x-data="{ 
+      current: 0, 
+      images: [
+                '../assets/comp_poster/comp_poster/FC/FC 25 TOURNAMENT (2) (1) (1) (1) (1).png',
+               '../assets/comp_poster/comp_poster/FC/FC 25 TOURNAMENT (1) (1) (1).png'
+           ], 
+      interval: null,
+      autoSlide() { 
+        this.interval = setInterval(() => { 
+          this.current = (this.current + 1) % this.images.length;
+        }, 3000);
+      },
+      pauseSlide() {
+        clearInterval(this.interval);
+      },
+      resumeSlide() {
+        this.autoSlide();
+      },
+        handleTouchStart(e) {
+          this.touchStartX = e.touches[0].clientX;
+          this.pauseSlide();
+        },
+        handleTouchMove(e) {
+          this.touchEndX = e.touches[0].clientX;
+        },
+        handleTouchEnd() {
+          const diff = this.touchStartX - this.touchEndX;
+          const threshold = 50;
+          
+          if (diff > threshold) {
+            // Swipe left - next
+            this.current = (this.current + 1) % this.images.length;
+          } else if (diff < -threshold) {
+            // Swipe right - previous
+            this.current = (this.current - 1 + this.images.length) % this.images.length;
+          }
+          this.resumeSlide();
+        }
+      }" x-init="autoSlide()">
+        <div @touchstart="handleTouchStart" 
+             @touchmove="handleTouchMove" 
+             @touchend="handleTouchEnd" 
+             @mouseenter="pauseSlide()" 
+             @mouseleave="resumeSlide()">
+          <img
+            :src="images[current]"
+            class="slideshow-img"
+            width="500"
+            height="500"
+          />
+          <div class="dots">
+            <template x-for="(image, index) in images" :key="index">
+              <div
+                :class="{'dot active': current === index, 'dot': current !== index}"
+              ></div>
+            </template>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section (About the Event) -->
+      <div class="right-section">
+        <div class="content">
+          <div class="info-header">
+            <i class="fas fa-info-circle"></i>
+            <h2>About the Event</h2>
+          </div>
+          <p class="info-text">
+            Get ready for an electrifying FC 25 Tournament! Compete with top
+            players, showcase your skills, and battle for glory in the ultimate
+            football gaming showdown. Whether you're a casual player or a pro,
+            this event promises thrilling matches, intense competition, and
+            amazing prizes. Join us for an unforgettable gaming experience and
+            prove you're the best on the virtual pitch!Calling all tech
+            enthusiasts! Are you ready to test your skills in the ultimate tech
+            showdown? Welcome to Tech Survival: Squid Game Edition—a thrilling
+            quiz & coding challenge designed for both newbies and mid-level
+            techies! Inspired by Squid Game, this competition will push your
+            limits through multiple phases of intense problem-solving, coding,
+            debugging, and brain-teasing tech quizzes. Think you're a tech
+            genius? Time to prove it!
+          </p>
+          <p class="info-text">Contact: 9847216662 / 6238014911</p>
+          <p class="info-text">Entry Fee: ₹50 per head</p>
+          <p class="info-text">
+            *No Entry Fee For Computer Science Department Students
+          </p>
+          <div class="divider"></div>
+          <div class="register-button">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdyL7j2y5WN3ubumpjkY0SiNqxyHrJZfbw3ufc50ZB6wtjQDw/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>Register Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

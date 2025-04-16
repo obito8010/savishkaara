@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/png" href="/assets/icons/saavishkaara_logo_new.png">
+
+    <title>Events 2025</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #000;
+        color: rgb(235,230,208);
+      }
+      .active-btn {
+        background-color: rgb(235,230,208);
+        color: black;
+      }
+
+      @font-face {
+            font-family: 'KyivTypeSansBlack';
+            src: url('../assets/fonts/Pricedown_Bl.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
+            
+        }
+
+        h1 {
+            font-family: 'KyivTypeSansBlack', sans-serif;
+                          /* WebKit Text Stroke */
+              -webkit-text-stroke: 4px #000; /* Stronger black stroke */
+
+          /* Alternative for browsers without text-stroke */
+          text-shadow: 
+              -4px -4px 0 #000, 
+              4px -4px 0 #000, 
+              -4px  4px 0 #000, 
+              4px  4px 0 #000,
+              0px  0px 15px rgba(0, 0, 0, 1); /* Glow effect */
+        }
+        .rounded-button {
+    background-color: #553b17; /* Green background */
+    color: rgb(235,230,208); /* White text */
+    border: none;
+    padding: 15px 32px; /* Padding for button */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 12px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rounded-button:hover {
+    background-color: #581d19; /* Darker green on hover */
+}
+
+
+/* Mobile Optimization for Filtering Buttons */
+@media (max-width: 480px) {
+    /* Adjust the button font size and padding for smaller screens */
+    .filter-btn {
+        font-size: 1.5rem;       /* Slightly smaller text */
+        padding: 0.5rem 1rem;     /* Reduced padding */
+    }
+    /* Optionally reduce the gap between buttons if needed */
+    .flex {
+        gap: 0.5rem;
+        margin-top: 2rem;
+    }
+}
+/* Mobile view: Increase size of 'Events 2025' */
+@media (max-width: 480px) {
+    h1.text-center {
+        font-size: 18vw !important; /* Increase size on mobile */
+        line-height: 1.2; /* Adjust line height for better spacing */
+    }
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+     <!-- Background Image -->
+     <div class="hero-bg absolute inset-0" style="background-image: url('../assets/bg2.png'); background-size: cover; background-position: center;"></div>
+  <!-- Optional Overlay (to darken the image) -->
+  <div class="hero-overlay absolute inset-0 bg-black opacity-50"></div>
+  <!-- Overlay Title -->
+  <section class="relative w-full h-[70vh] bg-cover bg-center flex flex-col items-center justify-center">
+    <h1 class="text-center text-[8vw] font-bold leading-none text-[rgb(235,230,208)]">
+      Events <br /><span>2025</span>
+    </h1>
+    <a href="javascript:history.back()" class="absolute top-4 left-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="white">
+        <path d="M19 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H19v-2z"/>
+      </svg>
+    </a>
+    
+    
+
+  </section>
+  
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <!-- Content Wrapper -->
+    <div class="container mx-auto px-4 py-8">
+      <!-- Filtering Buttons -->
+      <div class="flex flex-wrap justify-center mt-8 gap-4">
+        <button class="filter-btn px-3 py-1 text-sm rounded-full border border-white active-btn" data-category="all"><b>ALL</b></button>
+        <button class="filter-btn px-3 py-1 text-sm rounded-full border border-white" data-category="ss"><b>INCEPTION OF SYMPO</b> </button>
+        <button class="filter-btn px-3 py-1 text-sm rounded-full border border-white" data-category="tech"><b>TECHNICAL EVENTS</b></button>
+        <button class="filter-btn px-3 py-1 text-sm rounded-full border border-white" data-category="techxp"><b>TECHNICAL EXPO</b></button>
+        <button class="filter-btn px-3 py-1 text-sm rounded-full border border-white" data-category="legends"><b>NON TECHNICAL EVENTS</b></button>
+        <button class="filter-btn px-3 py-1 text-sm rounded-full border border-white" data-category="la"><b>LEISURE ACTIVITY</b></button>
+        <button class="filter-btn px-3 py-1 text-sm rounded-full border border-white" data-category="tt"><b>TALENT TIME</b></button>
+      </div>
+
+      <!-- Event Cards Container with a 40px gap; 5 cards per row on md screens -->
+      <div id="eventContainer" class="grid grid-cols-1 md:grid-cols-4 gap-[40px] p-8">
+        <!-- Inception Of Sympo -->
+
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="ss">
+          <a href="inauguration" class="block h-full">
+          <img src="../assets/nologo/inaguration.jpg" alt="Inception Of Sympo" class="w-full h-full object-cover" />
+          <!-- Overlay rectangle positioned 10% above the bottom -->
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Inauguration</h2>
+            <p class="text-xs md:text-sm text-gray-300">Inception Of Sympo</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="ss">
+          <a href="Esp 32" class="block h-full">
+          <img src="../assets/nologo/ESp-32 (1) (1).png" alt="Inception Of Sympo" class="w-full h-full object-cover" />
+          <!-- Overlay rectangle positioned 10% above the bottom -->
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Fast Track IoT With ESP 32</h2>
+            <p class="text-xs md:text-sm text-gray-300">Inception Of Sympo</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+
+        
+
+
+        <!-- Inception Of Sympo -->
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="ss">
+          <a href="ai" class="block h-full">
+          <img src="../assets/nologo/ai workshop 2025 (1) (1) (1).png" alt="Inception Of Sympo" class="w-full h-full object-cover" />
+          <!-- Overlay rectangle positioned 10% above the bottom -->
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">AI-Powered Application Development with Replit: Enhancing Productivity and Efficiency</h2>
+            <p class="text-xs md:text-sm text-gray-300">Inception Of Sympo</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="ss">
+          <a href="git" class="block h-full">
+          <img src="../assets/nologo/HANDS-ON GITHUB workshop (1) (1) (1) (1) (1).png" alt="Inception Of Sympo" class="w-full h-full object-cover" />
+          <!-- Overlay rectangle positioned 10% above the bottom -->
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Hands-On GitHub for Developers: Best Practices & Workflow</h2>
+            <p class="text-xs md:text-sm text-gray-300">Inception Of Sympo</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+        <!-- Technical Event Cards -->
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="tech">
+          <a href="techsurvival" class="block h-full">
+          <img src="../assets/nologo/TECH SURVIVAL (1) (1).png" alt="tech survival" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Tech Survival</h2>
+            <p class="text-xs md:text-sm text-gray-300">Technical Event</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="tech">
+          <a href="nerdscript" class="block h-full">
+          <img src="../assets/nologo/NERDSCRIPT (1) (1) (1).png" alt="nerd script" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Nerd Script</h2>
+            <p class="text-xs md:text-sm text-gray-300">Technical Event</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="tech">
+          <a href="CTF" class="block h-full">
+          <img src="../assets/nologo/BIOS CTF (1) (1) (1) (1).png" alt="ctf" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">CTF</h2>
+            <p class="text-xs md:text-sm text-gray-300">Technical Event</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="tech">
+          <a href="treasurehunt" class="block h-full">
+          <img src="../assets/nologo/TREASURE HUNT (1) (1) (1) (1).png" alt="ctf" class="w-full h-full object-cover" />
+          <img src="" alt="treasure hunt" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Treasure Hunt</h2>
+            <p class="text-xs md:text-sm text-gray-300">Technical Event</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+        <!-- Additional Technical Event Cards -->
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="tech">
+          <a href="webhackathon" class="block h-full">
+          <img src="../assets/nologo/web hackathon 2 (1) (1) (1).png" alt="ctf" class="w-full h-full object-cover" />
+          <img src="" alt="web hackathon" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Web Hackathon</h2>
+            <p class="text-xs md:text-sm text-gray-300">Technical Event</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+          </a>
+        </div>
+
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="tech">
+          <a href="TechTriathalon" class="block h-full">
+          <img src="../assets/nologo/TEHC TRIATHALON (1) (1).png" alt="tech triathlon" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Tech Triathlon</h2>
+            <p class="text-xs md:text-sm text-gray-300">Technical Event</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="tech">
+          <a href="techingo" class="block h-full">
+          <img src="../assets/nologo/Technigo 2nd copy (2) (1) (1) (1) (1) (1) (1).png" alt="techingo" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">TechinGo</h2>
+            <p class="text-xs md:text-sm text-gray-300">Technical Event</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="tech">
+          <a href="uixploit" class="block h-full">
+          <img src="../assets/nologo/uixploit (1) (1) (1).png" alt="ui/ux design" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">UIXPLOIT</h2>
+            <p class="text-xs md:text-sm text-gray-300">Technical Event</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+        <!-- Tech Expo -->
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="techxp">
+          <a href="tech expo" class="block h-full">
+          <img src="../assets/nologo/xpo.jpg" alt="tech expo" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Innovista</h2>
+            <p class="text-xs md:text-sm text-gray-300">Tech Expo</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+        <!-- Non Technical Events -->
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="legends">
+          <a href="pes" class="block h-full">
+          <img src="../assets/nologo/PES 2025 (1).png" alt="pes" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">PES Tournament</h2>
+            <p class="text-xs md:text-sm text-gray-300">Non Technical Events</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="legends">
+          <a href="squidgame" class="block h-full">
+          <img src="../assets/nologo/Squid Game 2025 (1) (1).png" alt="squid game" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Squid Game</h2>
+            <p class="text-xs md:text-sm text-gray-300">Non Technical Events</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="legends">
+          <a href="fc25" class="block h-full">
+          <img src="../assets/nologo/FC 25 TOURNAMENT (1) (1) (1) (1).png" alt="FC 25 Tournament" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">FC25 Tournament</h2>
+            <p class="text-xs md:text-sm text-gray-300">Non Technical Events</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="legends">
+          <a href="xonotic" class="block h-full">
+              <img src="../assets/nologo/xonotic 2025 (1) (1) (1) (1) (1).png" alt="xonotic" class="w-full h-full object-cover" />
+              <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+                  <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Xonotic</h2>
+                  <p class="text-xs md:text-sm text-gray-300">Non Technical Events</p>
+                  <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+              </div>
+          </a>
+      </div>
+
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="legends">
+          <a href="velocity" class="block h-full">
+          <img src="../assets/nologo/velocity x automation 2025 (1) (1).png" alt="velocity x automation" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Velocity X Automation</h2>
+            <p class="text-xs md:text-sm text-gray-300">Non Technical Events</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="legends">
+          <a href="PUBG" class="block h-full">
+          <img src="../assets/nologo/bgmi 2025 (1) (1) (1).png" alt="velocity x automation" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">BGMI</h2>
+            <p class="text-xs md:text-sm text-gray-300">Non Technical Events</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+        <!-- Leisure Activity -->
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="la">
+          <a href="movie madness" class="block h-full">
+          <img src="../assets/nologo/MOvie Madness 2025.png" alt="lyp-sink battle" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Movie Madness</h2>
+            <p class="text-xs md:text-sm text-gray-300">Leisure Activity</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="la">
+          <a href="xparena" class="block h-full">
+          <img src="../assets/nologo/Xp arena (1) (2) (1) (1).png" alt="lyp-sink battle" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">XPArena</h2>
+            <p class="text-xs md:text-sm text-gray-300">Leisure Activity</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="la">
+          <a href="game room" class="block h-full">
+          <img src="../assets/nologo/game room (1) (1) (1) (1).png" alt="game room" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Game Room</h2>
+            <p class="text-xs md:text-sm text-gray-300">Leisure Activity</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+        
+
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="la">
+          <a href="carroms" class="block h-full">
+          <img src="../assets/nologo/CARROM (1) (1).png" alt="carroms" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Carroms</h2>
+            <p class="text-xs md:text-sm text-gray-300">Leisure Activity</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+
+        
+<!-- Talent Time -->
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="tt">
+          <a href="openmic" class="block h-full">
+          <img src="../assets/nologo/Open Mic 2k25 (1) (1) (1) (1).png" alt="impression challenge" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Open Mic</h2>
+            <p class="text-xs md:text-sm text-gray-300">Talent Time</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+        <div class="event-card relative group overflow-hidden h-[400px]" data-category="tt">
+          <a href="dance" class="block h-full">
+          <img src="../assets/nologo/DANCE (1) (1) (1) (1).png" alt="impression challenge" class="w-full h-full object-cover" />
+          <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+            <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Dance</h2>
+            <p class="text-xs md:text-sm text-gray-300">Talent Time</p>
+            <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+          </div>
+        </a>
+        </div>
+      
+    
+
+    <div class="event-card relative group overflow-hidden h-[400px]" data-category="tt">
+      <a href="band" class="block h-full">
+      <img src="../assets/nologo/Band (1) (1).png" alt="impression challenge" class="w-full h-full object-cover" />
+      <div class="absolute bottom-[10%] left-0 w-full h-[30%] bg-black bg-opacity-80 p-4 transition-all duration-300 group-hover:bg-opacity-50">
+        <h2 class="text-lg md:text-xl font-bold mb-1" style="color: rgb(235,230,208);">Music Band</h2>
+        <p class="text-xs md:text-sm text-gray-300">Talent Time</p>
+        <img alt="arrow" src="https://ragam.co.in/images/assets/cardArrow.svg" width="20" height="20" class="absolute top-2 right-2 transform transition-transform group-hover:scale-110" loading="lazy" style="color: transparent;">
+      </div>
+    </a>
+    </div>
+  </div>
+</div>
+</div>
+
+    <!-- Filtering Script -->
+    <!-- Filtering Script -->
+<script>
+  const buttons = document.querySelectorAll(".filter-btn");
+  const eventCards = document.querySelectorAll(".event-card");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      buttons.forEach((btn) => btn.classList.remove("active-btn"));
+      button.classList.add("active-btn");
+
+      const category = button.getAttribute("data-category");
+      eventCards.forEach((card) => {
+        card.style.display = (category === "all" || card.getAttribute("data-category") === category)
+          ? "block"
+          : "none";
+      });
+    });
+  });
+
+  // Auto-filter based on the URL query parameter
+  window.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const filterParam = urlParams.get('filter');
+    if (filterParam) {
+      // Simulate clicking the filter button that matches the query param.
+      const filterButton = document.querySelector(`.filter-btn[data-category="${filterParam}"]`);
+      if (filterButton) {
+        filterButton.click();
+      }
+    }
+  });
+</script>
+
+
+  </body>
+</html>

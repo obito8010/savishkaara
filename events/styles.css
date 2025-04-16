@@ -1,0 +1,181 @@
+@font-face {
+  font-family: 'Pricedown Custom';
+  src: url('../assets/fonts/Pricedown_Bl.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Fixed Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    box-sizing: border-box;
+    backdrop-filter: blur(8px);
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.back-button:hover {
+    opacity: 1;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    height: 40px;
+}
+
+/* Container */
+.container {
+    margin-top: 80px; /* Space for fixed header */
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 1200px;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+    }
+}
+
+.left-section, .right-section {
+    flex: 1;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.left-section > div {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+    touch-action: pan-y;
+    user-select: none;
+}
+
+.slideshow-img:active {
+    cursor: grabbing;
+}
+
+.dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 9999px;
+    background-color: gray;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+.dot:hover {
+    transform: scale(1.2);
+}
+
+.right-section .content {
+    padding: 1rem;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.info-header i {
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+}
+
+.info-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.info-text {
+    margin-bottom: 1rem;
+}
+
+.divider {
+    border-top: 1px solid white;
+    margin: 1rem 0;
+}
+
+.register-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.register-button button {
+    background-color: #16a34a;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.register-button button:hover {
+    background-color: #15803d;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px 4px rgba(22, 163, 74, 0.5);
+}

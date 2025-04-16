@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Madness</title>
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="/assets/icons/saavishkaara_logo_new.png">
+
+    <!-- External Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.3/dist/cdn.min.js"
+      defer
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Fixed Header -->
+    <header>
+      <a href="javascript:history.back()" class="absolute top-4 left-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="white"
+        >
+          <path
+            d="M19 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H19v-2z"
+          />
+        </svg>
+      </a>
+    </header>
+
+    <!-- Card Container -->
+    <div class="container">
+      <!-- Left Section (Poster with Slideshow) -->
+      <div
+        class="left-section"
+        x-data="{ 
+      current: 0, 
+      images: [
+               '../assets/comp_poster/comp_poster/MOvie Madness 2025/1-min.png',
+                '../assets/comp_poster/comp_poster/MOvie Madness 2025/3-min.png' 
+           ], 
+      interval: null,
+      autoSlide() { 
+        this.interval = setInterval(() => { 
+          this.current = (this.current + 1) % this.images.length;
+        }, 3000);
+      },
+      pauseSlide() {
+        clearInterval(this.interval);
+      },
+      resumeSlide() {
+        this.autoSlide();
+      },
+        handleTouchStart(e) {
+          this.touchStartX = e.touches[0].clientX;
+          this.pauseSlide();
+        },
+        handleTouchMove(e) {
+          this.touchEndX = e.touches[0].clientX;
+        },
+        handleTouchEnd() {
+          const diff = this.touchStartX - this.touchEndX;
+          const threshold = 50;
+          
+          if (diff > threshold) {
+            // Swipe left - next
+            this.current = (this.current + 1) % this.images.length;
+          } else if (diff < -threshold) {
+            // Swipe right - previous
+            this.current = (this.current - 1 + this.images.length) % this.images.length;
+          }
+          this.resumeSlide();
+        }
+      }" x-init="autoSlide()">
+        <div @touchstart="handleTouchStart" 
+             @touchmove="handleTouchMove" 
+             @touchend="handleTouchEnd" 
+             @mouseenter="pauseSlide()" 
+             @mouseleave="resumeSlide()">
+          <img
+            :src="images[current]"
+            class="slideshow-img"
+            width="500"
+            height="500"
+          />
+          <div class="dots">
+            <template x-for="(image, index) in images" :key="index">
+              <div
+                :class="{'dot active': current === index, 'dot': current !== index}"
+              ></div>
+            </template>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section (About the Event) -->
+      <div class="right-section">
+        <div class="content">
+          <div class="info-header">
+            <i class="fas fa-info-circle"></i>
+            <h2>About the Event</h2>
+          </div>
+          <p class="info-text">
+            The competition begins with 30 teams of two in Round 1, consisting
+            of a classic quiz and a 2v2 "Guess the Movie" challenge, narrowing
+            it down to 10 teams. Subsequent rounds include a "Movie Dialogue
+            Challenge" (10 to 6 teams), an "Impression Challenge" (6 to 4
+            teams), and a "Guess the Song" challenge leading to a final
+            "Complete the Lyrics" faceoff between two teams, with the winner
+            claiming the title of Movie Quiz Champions!
+          </p>
+          <p class="info-text">Contact: 8848010684 / 7012936803 / 9645241714</p>
+          <p class="info-text">Entry Fee: ₹20 per head</p>
+
+          <div class="divider"></div>
+          <div class="register-button">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSej1bk9PG9dsZKUcMMtii2j0XlCiDH1oLR0S2cp0YHyOWK8Fg/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>Register Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

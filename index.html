@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Savishkaara 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS (for utility classes) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- CUSTOM FONTS (replace with your fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=YourFontFamily:wght@400;700&display=swap" rel="stylesheet" />
+  
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="styles1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/png" href="/assets/icons/saavishkaara_logo_new.png">
+
+</head>
+<body>
+
+  <!-- Preloader -->
+<!-- Clean Preloader -->
+<div id="preloader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black transition-opacity duration-500">
+  <img src="assets/preloader.gif" alt="Loading" 
+       id="preloader-logo"
+       class="w-[150px] h-[150px] md:w-[200px] md:h-[200px] object-contain 
+              transition-all duration-1000 ease-out transform origin-center">
+</div>
+<!-- MENU BUTTON (Hamburger Icon) -->
+<button class="menu-button" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<!-- MENU OVERLAY -->
+<div class="menu-overlay hidden" id="menuOverlay">
+  <ul class="menu-list">
+    <li><a href="#home" onclick="closeMenu()">HOME</a></li>
+    <li><a href="#section-quote" onclick="closeMenu()">ABOUT</a></li>
+    <li><a href="#events" onclick="closeMenu()">EVENTS</a></li>
+    <li><a onclick="location.href='events?filter=all'">REGISTRATION</a></li>
+    <li><a href="#faq" onclick="closeMenu()">FAQ</a></li>
+    <li><a href="#contact" onclick="closeMenu()">CONTACT US</a></li>
+  </ul>
+</div>
+
+
+<!-- HERO / LANDING SECTION -->
+<header id="home" class="hero-section relative h-screen flex items-center justify-center">
+  <!-- Background Image -->
+  <div class="hero-bg"></div>
+  <!-- Dark Overlay -->
+  <div class="hero-overlay"></div>
+  <!-- Text Content -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-30 hero-text-container">
+    <h1 class="hero-tiles">DEPARTMENT OF COMPUTER SCIENCE AND IT</h1>
+    <h1 class="hero-tiles">SCHOOL OF COMPUTING</h1>
+    <h1 class="hero-title">SAVISHKAARA 
+      <span class="hero-subtitle">2025</span>
+    </h1>
+    <br><br>
+    <h1 class="hero-tile">APRIL 10,11</h1>
+  </div>
+</header>
+
+
+
+  <!-- Quote Section with Enhanced Animation -->
+  <section
+    id="section-quote"
+    data-scroll-time="0.5"
+    data-w-id="6e02e256-251a-7737-2637-6af237029238"
+    class="section_quote lazy-section"
+    style="position: relative; background: black; padding: 40px 20px;"
+  >
+    <div class="padding-global padding-section-medium" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <div class="container-medium is-quote" style="position: relative;">
+        <!-- Top Decor -->
+        <div class="quote_decor-icons" style="display: flex; align-items: center; justify-content: center;">
+          <img src="https://cdn.prod.website-files.com/6718c8afa78e156621f3a2ed/671a4c5b86c9e34860c28b68_icon-star.svg" loading="lazy" alt="" class="icon_star is-1" style="width: 30px; margin-right: 10px;" />
+          <div class="border-horizontal-wrap" style="flex: 1;">
+            <div class="border-horizontal" style="border-top: 2px solid #fff; opacity: 0.4; margin: 0 10px;"></div>
+          </div>
+          <img src="https://cdn.prod.website-files.com/6718c8afa78e156621f3a2ed/671a4c5b86c9e34860c28b68_icon-star.svg" loading="lazy" alt="" class="icon_star is-2" style="width: 30px; margin-left: 10px;" />
+        </div>
+
+        <div class="spacer-medium" style="height: 40px;"></div>
+
+        <!-- Main Quote Container -->
+         
+        <section class="savishkaara-section">
+          <div class="container">
+              <h1><b>ABOUT SAVISHKAARA</b></h1><br>
+              <p>
+                  Savishkaara is the annual techfest of Amrita Vishwa Vidyapeetham, organized by the Department of Computer Science and IT. It brings together innovators and technology enthusiasts through <strong>competitions, workshops, hackathons, and expert sessions</strong>, focusing on emerging technologies like AI, cybersecurity, robotics, and IoT.
+              </p>
+              <p>
+                  With a perfect blend of learning and innovation, Savishkaara provides a platform to showcase talent, exchange ideas, and engage with industry experts. Join us to explore the <strong>future of technology</strong> and be part of an inspiring journey.
+              </p>
+          </div>
+      </section>
+    
+
+              <!-- TECHFEST LOGOS  -->
+              <section class="bg-black py-6 -mt-4 overflow-hidden">
+                <div class="logo-slider flex flex-nowrap items-center gap-10">
+                  <!-- Logos duplicated for seamless scrolling -->
+                  <div class="logo-item shrink-0">
+                    <img src="assets/2024/iedcbgremoved-whiteText.png" alt="IEDC" class="max-w-[60px] transition duration-300 hover:scale-105"/>
+                  </div>
+                  <div class="logo-item shrink-0">
+                    <img src="assets/2024/savishkaara.PNG" alt="Savishkaara" class="max-w-[120px] transition duration-300 hover:scale-105"/>
+                  </div>
+                  <div class="logo-item shrink-0">
+                    <img src="assets/amrita-vishwa-vidyapeetham-university-logo-white-version.svg" alt="Amrita" class="max-w-[140px] transition duration-300 hover:scale-105"/>
+                  </div>
+                  <div class="logo-item shrink-0">
+                    <img src="assets/2024/IIC-removebg-preview-Increasedcolor.png" alt="IIC" class="max-w-[120px] transition duration-300 hover:scale-105"/>
+                  </div>
+                  <div class="logo-item shrink-0">
+                    <img src="assets/2024/sicwhite.png" alt="SIC" class="max-w-[120px] transition duration-300 hover:scale-105"/>
+                  </div>
+                  <div class="logo-item shrink-0">
+                    <img src="assets/2024/CSI.PNG" alt="CSI" class="max-w-[70px] transition duration-300 hover:scale-105"/>
+                  </div>
+              
+                  <!-- Duplicating the logos for a seamless effect -->
+                  <div class="logo-item shrink-0">
+                    <img src="assets/2024/iedcbgremoved-whiteText.png" alt="IEDC" class="max-w-[60px] transition duration-300 hover:scale-105"/>
+                  </div>
+                  <div class="logo-item shrink-0">
+                    <img src="assets/2024/KMRL-logo.PNG" alt="KMRL" class="max-w-[120px] transition duration-300 hover:scale-105"/>
+                  </div>
+                  <div class="logo-item shrink-0">
+                    <img src="assets/2024/savishkaara.PNG" alt="Savishkaara" class="max-w-[120px] transition duration-300 hover:scale-105"/>
+                  </div>
+                  <div class="logo-item shrink-0">
+                    <img src="assets/amrita-vishwa-vidyapeetham-university-logo-white-version.svg" alt="Amrita" class="max-w-[140px] transition duration-300 hover:scale-105"/>
+                  </div>
+                  <div class="logo-item shrink-0">
+                    <img src="assets/2024/IIC-removebg-preview-Increasedcolor.png" alt="IIC" class="max-w-[120px] transition duration-300 hover:scale-105"/>
+                  </div>
+                  <div class="logo-item shrink-0">
+                    <img src="assets/2024/sicwhite.png" alt="SIC" class="max-w-[120px] transition duration-300 hover:scale-105"/>
+                  </div>
+                  <div class="logo-item shrink-0">
+                    <img src="assets/2024/CSI.PNG" alt="CSI" class="max-w-[70px] transition duration-300 hover:scale-105"/>
+                  </div>
+                </div>
+              </section>
+
+        <!-- Bottom Decor -->
+        <!-- <div class="quote_decor-icons" style="display: flex; align-items: center; justify-content: center;">
+          <img src="https://cdn.prod.website-files.com/6718c8afa78e156621f3a2ed/671a4c5b86c9e34860c28b68_icon-star.svg" loading="lazy" alt="" class="icon_star is-1" style="width: 30px; margin-right: 10px;" />
+          <div class="border-horizontal-wrap" style="flex: 1;">
+            <div class="border-horizontal" style="border-top: 2px solid #ffffff; opacity: 0.4; margin: 0 10px;"></div>
+          </div>
+          <img src="https://cdn.prod.website-files.com/6718c8afa78e156621f3a2ed/671a4c5b86c9e34860c28b68_icon-star.svg" loading="lazy" alt="" class="icon_star is-2" style="width: 30px; margin-left: 10px;" />
+        </div> -->
+
+        <!-- Hidden/Placeholder Elements -->
+        
+      </div>
+    </div>
+
+    <!-- Absolute Dots on Sides -->
+    <div data-hide-on="tablet-mobile" class="absolute flex-quote-shape-left hide-adaptives" style="top: 50%; left: 0; transform: translateY(-50%);">
+      <img src="https://cdn.prod.website-files.com/6718c8afa78e156621f3a2ed/671b7a980f59a762ad368a4f_shape_quote-dots.svg" loading="lazy" data-w-id="0cac3221-0c30-0b1d-4c6a-8c85d4e372c8" alt="" class="image" style="width: 200px; opacity: 0.5;" />
+    </div>
+    <div data-hide-on="tablet-mobile" class="absolute flex-quote-shape-right hide-adaptives" style="top: 50%; right: 0; transform: translateY(-50%);">
+      <img src="https://cdn.prod.website-files.com/6718c8afa78e156621f3a2ed/671b7a980f59a762ad368a4f_shape_quote-dots.svg" loading="lazy" data-w-id="7524a5ed-24e8-1d7a-5912-31d4feb66580" alt="" class="image" style="width: 200px; opacity: 0.5;" />
+    </div>
+  </section>
+
+
+<!-- CARDS SECTION -->
+<section id="events" class="carousel-section">
+  <div class="carousel-container">
+    <br><br><br><br>
+    <h1 class="text-6xl font-bold text-left text-neutral-200 mt-[-100px] mb-6 border-b-4 border-[#69491C] pb-2">
+     EVENTS
+    </h1>
+    <div class="cards-wrapper" id="cardsWrapper">
+      <div class="card" onclick="location.href='events?filter=ss';" style="background-image: url('assets/cards/INCEPTION OF SYMPO.png');">
+        <p>INCEPTION OF SYMPO</p>
+      </div>
+      <div class="card" onclick="location.href='events?filter=tech';" style="background-image: url('assets/cards/TECHNICAL EVENTS.png');">
+        <p>TECHNICAL EVENTS</p>
+      </div>
+      <div class="card" onclick="location.href='events?filter=legends';" style="background-image: url('assets/cards/NON TECHNICAL EVENTS.png');">
+        <p>NON TECHNICAL EVENTS</p>
+      </div>
+      <div class="card" onclick="location.href='events?filter=techxp';" style="background-image: url('assets/cards/TECHNICAL EXPO.png');">
+        <p>TECHNICAL EXPO</p>
+      </div>
+      <div class="card" onclick="location.href='events?filter=la';" style="background-image: url('assets/cards/LEISURE ACTIVITY.png');">
+        <p>LEISURE ACTIVITY</p>
+      </div>
+      <div class="card" onclick="location.href='events?filter=tt';" style="background-image: url('assets/cards/TALENT TIME.png');">
+        <p>TALENT TIME</p>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="arrow" id="prevArrow">❮</button>
+      <button class="arrow" id="nextArrow">❯</button>
+    </div>
+  </div>
+  </section>
+
+
+
+
+<!-- FAQ -->
+<div id="faq" class="bg-black text-white flex justify-center items-center py-12">
+  <div class="w-full max-w-7xl px-8 lg:px-24">
+    <h1 class="text-6xl font-bold text-left text-neutral-200 mb-10 border-b-4 border-[#69491C] pb-2">
+      FAQs
+    </h1>
+    <div class="space-y-8">
+      <!-- FAQ Item -->
+      <div class="bg-neutral-900 p-6 rounded-lg shadow-lg transition-all hover:shadow-[#69491C]/50">
+        <button class="flex justify-between items-center w-full text-lg font-semibold text-neutral-300 hover:text-[#69491C] transition-colors" onclick="toggleFAQ(1)">
+          <span>When is Savishkaara'25?</span>
+          <svg id="icon-1" class="w-6 h-6 text-neutral-300 transition-transform transform rotate-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </button>
+        <p id="answer-1" class="text-neutral-400 text-base mt-4 hidden transition-opacity duration-300">
+          Savishkaara'25 will be held on April 10 and 11, with pre-events taking place on April  8 and 9.
+
+        </p>
+      </div>
+      <!-- FAQ Item -->
+      <div class="bg-neutral-900 p-6 rounded-lg shadow-lg transition-all hover:shadow-[#69491C]/50">
+        <button class="flex justify-between items-center w-full text-lg font-semibold text-neutral-300 hover:text-[#69491C] transition-colors" onclick="toggleFAQ(2)">
+          <span>Where is Savishkaara'25 held?</span>
+          <svg id="icon-2" class="w-6 h-6 text-neutral-300 transition-transform transform rotate-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </button>
+        <p id="answer-2" class="text-neutral-400 text-base mt-4 hidden transition-opacity duration-300">
+          The event will be hosted at Amrita Vishwa Vidyapeetham, Kochi Campus.
+
+        </p>
+      </div>
+      <!-- FAQ Item -->
+      <div class="bg-neutral-900 p-6 rounded-lg shadow-lg transition-all hover:shadow-[#69491C]/50">
+        <button class="flex justify-between items-center w-full text-lg font-semibold text-neutral-300 hover:text-[#69491C] transition-colors" onclick="toggleFAQ(3)">
+          <span>Who do I contact for enquiries?</span>
+          <svg id="icon-3" class="w-6 h-6 text-neutral-300 transition-transform transform rotate-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </button>
+        <p id="answer-3" class="text-neutral-400 text-base mt-4 hidden transition-opacity duration-300">
+          For any enquiries, you can contact Vaishnav B at 6238996266.
+
+        </p>
+      </div>
+      <div class="bg-neutral-900 p-6 rounded-lg shadow-lg transition-all hover:shadow-[#69491C]/50">
+        <button class="flex justify-between items-center w-full text-lg font-semibold text-neutral-300 hover:text-[#69491C] transition-colors" onclick="toggleFAQ(4)">
+          <span>Who can participate in Savishkaara'25?</span>
+          <svg id="icon-4" class="w-6 h-6 text-neutral-300 transition-transform transform rotate-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </button>
+        <p id="answer-4" class="text-neutral-400 text-base mt-4 hidden transition-opacity duration-300">
+          Savishkaara'25 is open to students from all departments.
+
+        </p>
+      </div>
+
+
+      <div class="bg-neutral-900 p-6 rounded-lg shadow-lg transition-all hover:shadow-[#69491C]/50">
+        <button class="flex justify-between items-center w-full text-lg font-semibold text-neutral-300 hover:text-[#69491C] transition-colors" onclick="toggleFAQ(5)">
+          <span> Is there a registration fee?</span>
+          <svg id="icon-5" class="w-6 h-6 text-neutral-300 transition-transform transform rotate-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </button>
+        <p id="answer-5" class="text-neutral-400 text-base mt-4 hidden transition-opacity duration-300">
+          Registration is free for Computer Department students, while students from other departments need to pay .
+
+        </p>
+      </div>
+
+
+      <div class="bg-neutral-900 p-6 rounded-lg shadow-lg transition-all hover:shadow-[#69491C]/50">
+        <button class="flex justify-between items-center w-full text-lg font-semibold text-neutral-300 hover:text-[#69491C] transition-colors" onclick="toggleFAQ(6)">
+          <span> How do I register for the event?</span>
+          <svg id="icon-6" class="w-6 h-6 text-neutral-300 transition-transform transform rotate-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </button>
+        <p id="answer-6" class="text-neutral-400 text-base mt-4 hidden transition-opacity duration-300">
+          You can register for the event through the official website.
+        </p>
+      </div>
+
+    
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ======= Contact Section ======= -->
+<div id="faq" class="bg-black text-white flex justify-center items-center py-12">
+  <div class="w-full max-w-7xl px-8 lg:px-24">
+    <br><br><br><br><br>
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h1 class="text-6xl font-bold text-left text-neutral-200 mt-[-100px] mb-6 border-b-4 border-[#69491C] pb-2">
+            CONTACT US
+          </h1>
+          <div class="col-lg-6">
+            <div class="container">
+              <div class="contact--lockup">
+                <div class="contact-content">
+                  <!-- Clickable image with proper size constraints -->
+                  <img src="assets/map.jpg" alt="Location Map" class="background-img" 
+                       onclick="window.open('https://maps.app.goo.gl/w4WZBERDzrXNvLVn8', '_blank')" 
+                       style="cursor: pointer;">
+                  <!-- Contact info -->
+                  <div class="modal--information">
+                    <p>Edappally North P O, Brahmasthanam,<br> Kochi, Ernakulam, Kerala 682024</p>
+                    <a href="mailto:savishkaara.amrita@gmail.com">savishkaara.amrita@gmail.com</a>
+                    <a href="https://wa.me/916238996266" target="_blank">Vaishnav B : +91 62389 96266</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>    
+      </div>
+    </section>
+  </div>
+</div>
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="custom-footer">
+ 
+
+
+  <p>&copy; 2025 Savishkaara. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/company/innovation-and-entrepreneurship-development-cell-iedc-asas/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+    </a>
+    <a href="https://www.instagram.com/savishkaara2k25?igsh=MWRvOHkybmNmaXhjaQ==" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-square-instagram"></i> Instagram
+    </a>
+    <!-- <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-square-facebook"></i> Facebook
+    </a> -->
+</div>
+
+</footer>
+
+
+<script src="main.js"></script>
+</body>
+</html>
